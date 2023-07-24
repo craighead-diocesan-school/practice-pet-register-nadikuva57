@@ -1,12 +1,16 @@
 let animalName = [
-    Scruffy,
-    Cleo,
-    Zuri,
+    'Scruffy',
+    'Cleo',
+    'Zuri',
 ]
 
 function addName() {
     let newName = prompt("What name do you want to add? ")
     animalName.push(newName)
+}
+
+function showPets() {
+    alert(animalName)
 }
 
 function removeName() {
