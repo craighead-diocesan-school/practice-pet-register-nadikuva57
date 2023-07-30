@@ -16,12 +16,27 @@ function addPet() {
     animal.push(pet)
 }
 
-function showPets() {
-    alert(animal)
+function findPet() {
+    let searchAnimal = prompt("enter a animal to search for:")
+    let searchResult = false
+  
+    for (let currentNumber of animal) {
+      if (currentNumber === Number(searchAnimal)) {
+        searchResult = true
+      }
+    }
+  
+    if(searchResult = true){
+      alert(searchAnimal + 'was found')
+    }else{
+      alert(searchAnimal + 'was not found')
+    }
+  
+    alert(searchAnimal + ' found: ' + searchResult)
 }
 
 function removeName() {
-    let index = prompt("choose a number between 0 and 2")
+    let index = prompt("choose a name to delete")
     animal.splice(index, 1)
 }
 
