@@ -1,51 +1,52 @@
-let animal = [
-    {name: 'Blinky', age: 5, species:'Sheep'},
-    {name: 'Zuri', age: 8, species:'Dog'},
-    {name: 'Chunky', age: 3, species:'Rabbit'},
+let pets = [
+  {name: 'Blinky', age: 5, species:'Sheep'},
+  {name: 'Zuri', age: 8, species:'Dog'},
+  {name: 'Chunky', age: 3, species:'Rabbit'},
 ]
 
 function showPets(){
-  for (let animals of animal){
-    alert(animals.name)
+  for(let pet of pets){
+    alert(pet.name)
   }
 }
 
 function addPet(){
-    let newName = prompt('What name do you want to add?')
-    let newAge = prompt('What is the age of your pet?')
-    let newSpicies = prompt('What is the spieces of your pet?')
-    let pet = {
-        newName: newName,
-        newAge: newAge,
-        newSpicies: newSpicies
-    }
-    animal.push(pet)
+  let name = prompt('What name do you want to add?')
+  let age = prompt('What is the age of your pet?')
+  let species = prompt('What is the spieces of your pet?')
+  let pet = {
+    name: name,
+    age: age,
+    species: species
+  }
+  pets.push(pet)
 }
 
-function findPet() {
-  let searchAnimal = prompt("enter a animal to search for:")
+function searchPet(){
+  let petToSearchFor = prompt("What is the name of the animal you want to find?")
   let searchResult = false
-  
-  for (let currentNumber of animal) {
-    if (currentNumber === Number(searchAnimal)) {
+  for (let pet of pets) {
+    if (pet.name == petToSearchFor) {
       searchResult = true
     }
   }
-  
-  if(searchResult = true){
-    alert(searchAnimal + ' was found')
-  }else{
-    alert(searchAnimal + ' was not found')
+
+  if (searchResult == true) {
+    alert("found the pet!")
+  } else {
+    alert("Didn't find the pet")
   }
 }
 
-function removePet() {
+
+function removePet(){
   let index = 0 
-  for (let animals of animal){
-    alert(index + ":" + animal.name)
+  for (let pet of pets){
+    alert(index + ":" + pet.name)
   }
+  index = index + 1
   let indextoRemove = prompt("Which pet would you like to remove")
-  pet.splice{indextoRemove, 1}
+  pets.splice(indextoRemove, 1)
 }
 
 
