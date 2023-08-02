@@ -4,7 +4,13 @@ let animal = [
     {name: 'Chunky', age: 3, species:'Rabbit'},
 ]
 
-function addPet() {
+function showPets(){
+  for (let animals of animal){
+    alert(animals.name)
+  }
+}
+
+function addPet(){
     let newName = prompt('What name do you want to add?')
     let newAge = prompt('What is the age of your pet?')
     let newSpicies = prompt('What is the spieces of your pet?')
@@ -17,27 +23,29 @@ function addPet() {
 }
 
 function findPet() {
-    let searchAnimal = prompt("enter a animal to search for:")
-    let searchResult = false
+  let searchAnimal = prompt("enter a animal to search for:")
+  let searchResult = false
   
-    for (let currentNumber of animal) {
-      if (currentNumber === Number(searchAnimal)) {
-        searchResult = true
-      }
+  for (let currentNumber of animal) {
+    if (currentNumber === Number(searchAnimal)) {
+      searchResult = true
     }
+  }
   
-    if(searchResult = true){
-      alert(searchAnimal + 'was found')
-    }else{
-      alert(searchAnimal + 'was not found')
-    }
-  
-    alert(searchAnimal + ' found: ' + searchResult)
+  if(searchResult = true){
+    alert(searchAnimal + ' was found')
+  }else{
+    alert(searchAnimal + ' was not found')
+  }
 }
 
-function removeName() {
-    let index = prompt("choose a name to delete")
-    animal.splice(index, 1)
+function removePet() {
+  let index = 0 
+  for (let animals of animal){
+    alert(index + ":" + animal.name)
+  }
+  let indextoRemove = prompt("Which pet would you like to remove")
+  pet.splice{indextoRemove, 1}
 }
 
 
